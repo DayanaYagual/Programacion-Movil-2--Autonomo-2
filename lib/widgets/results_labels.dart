@@ -8,6 +8,8 @@ import 'main_result.dart';
 import 'sub_result.dart';
 
 class ResultsLabels extends StatelessWidget {
+  const ResultsLabels({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CalculatorBloc, CalculatorState>(
@@ -17,7 +19,7 @@ class ResultsLabels extends StatelessWidget {
             SubResult(text: state.firstNumber),
             SubResult(text: state.operation),
             SubResult(text: state.secondNumber),
-            LineSeparator(),
+            const LineSeparator(),
             MainResultText(text: state.mathResult),
           ],
         );

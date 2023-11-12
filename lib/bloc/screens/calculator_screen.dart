@@ -6,7 +6,10 @@ import 'package:autono2/bloc/calculator/calculator_bloc.dart';
 import 'package:autono2/widgets/results_labels.dart';
 import 'package:autono2/widgets/calc_button.dart';
 
+
 class CalculatorScreen extends StatelessWidget {
+  const CalculatorScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final calculatorBloc = BlocProvider.of<CalculatorBloc>(context);
@@ -14,34 +17,37 @@ class CalculatorScreen extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             Expanded(
               child: Container(),
             ),
-            ResultsLabels(),
+            const ResultsLabels(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CalculatorButton(
                   text: 'AC',
-                  bgColor: Color(0xffA5A5A5),
+                  bgColor: const Color(0xffA5A5A5),
                   onPressed: () => calculatorBloc.add(ResetAC()),
                 ),
                 CalculatorButton(
                   text: '+/-',
-                  bgColor: Color(0xffA5A5A5),
+                  bgColor: const Color(0xffA5A5A5),
+                  // ignore: avoid_print
                   onPressed: () => print('+/-'),
                 ),
                 CalculatorButton(
                   text: 'del',
-                  bgColor: Color(0xffA5A5A5),
+                  bgColor: const Color(0xffA5A5A5),
+                  // ignore: avoid_print
                   onPressed: () => print('del'),
                 ),
                 CalculatorButton(
                   text: '/',
-                  bgColor: Color(0xffF0A23B),
+                  bgColor: const Color(0xffF0A23B),
+                  // ignore: avoid_print
                   onPressed: () => print('/'),
                 ),
               ],
@@ -63,7 +69,8 @@ class CalculatorScreen extends StatelessWidget {
                 ),
                 CalculatorButton(
                   text: 'X',
-                  bgColor: Color(0xffF0A23B),
+                  bgColor: const Color(0xffF0A23B),
+                  // ignore: avoid_print
                   onPressed: () => print('X'),
                 ),
               ],
@@ -73,19 +80,23 @@ class CalculatorScreen extends StatelessWidget {
               children: [
                 CalculatorButton(
                   text: '4',
+                  // ignore: avoid_print
                   onPressed: () => print('4'),
                 ),
                 CalculatorButton(
                   text: '5',
+                  // ignore: avoid_print
                   onPressed: () => print('5'),
                 ),
                 CalculatorButton(
                   text: '6',
+                  // ignore: avoid_print
                   onPressed: () => print('6'),
                 ),
                 CalculatorButton(
                   text: '-',
-                  bgColor: Color(0xffF0A23B),
+                  bgColor: const Color(0xffF0A23B),
+                  // ignore: avoid_print
                   onPressed: () => print('-'),
                 ),
               ],
@@ -95,19 +106,23 @@ class CalculatorScreen extends StatelessWidget {
               children: [
                 CalculatorButton(
                   text: '1',
+                  // ignore: avoid_print
                   onPressed: () => print('1'),
                 ),
                 CalculatorButton(
                   text: '2',
+                  // ignore: avoid_print
                   onPressed: () => print('2'),
                 ),
                 CalculatorButton(
                   text: '3',
+                  // ignore: avoid_print
                   onPressed: () => print('3'),
                 ),
                 CalculatorButton(
                   text: '+',
-                  bgColor: Color(0xffF0A23B),
+                  bgColor: const Color(0xffF0A23B),
+                  // ignore: avoid_print
                   onPressed: () => print('+'),
                 ),
               ],
@@ -118,15 +133,18 @@ class CalculatorScreen extends StatelessWidget {
                 CalculatorButton(
                   text: '0',
                   big: true,
+                  // ignore: avoid_print
                   onPressed: () => print('0'),
                 ),
                 CalculatorButton(
                   text: '.',
+                  // ignore: avoid_print
                   onPressed: () => print('.'),
                 ),
                 CalculatorButton(
                   text: '=',
-                  bgColor: Color(0xffF0A23B),
+                  bgColor: const Color(0xffF0A23B),
+                  // ignore: avoid_print
                   onPressed: () => print('='),
                 ),
               ],
